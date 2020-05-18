@@ -43,12 +43,6 @@ button{
   cursor: pointer;
 }
 
-button:hover{
-  background-color: rgb(156, 3, 3);
-  color: white;
-}
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -61,7 +61,16 @@
   cursor:pointer;
 }
 
+.button-inline:hover{
+  background-color: rgb(156, 3, 3);
+  color: white;
+}
+
 .button-active {
   border-radius:0;
   border-bottom:1px solid #38BB6C;
+}
+
+.search-btn:hover {
+  color: #222;
 }
