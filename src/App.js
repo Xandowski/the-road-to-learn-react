@@ -84,13 +84,13 @@ const Table = ({ list, pattern, onDismiss }) =>
   <div className="table">
     {list.filter(isSearched(pattern)).map(item =>
       <div key={item.objectID} className="table-row">
-        <span>
+        <span style={{ largeColumn }}>
           <a href="{item.url}>{item.title}">title</a>
         </span>
-        <span> {item.author}</span>
-        <span> {item.num_comments}</span>
-        <span> {item.points}</span>
-        <span>
+        <span style={{ mediumColumn }}> {item.author}</span>
+        <span style={{ smallColumn }}> {item.num_comments}</span>
+        <span style={{ smallColumn }}> {item.points}</span>
+        <span style={{ smallColumn }}>
           <Button
             onClick={() => onDismiss(item.objectID)}
             className="button-inline"
@@ -101,6 +101,18 @@ const Table = ({ list, pattern, onDismiss }) =>
       </div>
     )}
   </div>
+//estilização da table
+const largeColumn = {
+  width: '40%',
+};
+
+const mediumColumn = {
+  width: '30%',
+};
+
+const smallColumn = {
+  width: '10%',
+};
 
 const Button = ({ onClick, className = '', children,}) =>
   <button
